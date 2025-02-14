@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cir312o16kt0j"
-path="res://.godot/imported/pirates.v1.png-e98be972d4aaf938a0fb1b3908040205.ctex"
+uid="uid://kqmcaj0v6waw"
+path="res://.godot/imported/Dungeon_Tileset.png-bd0efd9214a3b09d3b7bd586ee82bb48.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/pirates.v1.png"
-dest_files=["res://.godot/imported/pirates.v1.png-e98be972d4aaf938a0fb1b3908040205.ctex"]
+source_file="res://assets/sprites/Dungeon_Tileset.png"
+dest_files=["res://.godot/imported/Dungeon_Tileset.png-bd0efd9214a3b09d3b7bd586ee82bb48.ctex"]
 
 [params]
 
