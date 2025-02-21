@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://l5n4ujmbqu2d"
-path="res://.godot/imported/Leaf Elemental S Sprite Sheet.png-a79fb6805bdb399e0e3a6db51a743d7a.ctex"
+uid="uid://dpalmu7iypb8h"
+path="res://.godot/imported/Ghoul Sprite Sheet.png-92d73528483398923180e5b0baec8ee0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Leaf Elemental S Sprite Sheet.png"
-dest_files=["res://.godot/imported/Leaf Elemental S Sprite Sheet.png-a79fb6805bdb399e0e3a6db51a743d7a.ctex"]
+source_file="res://assets/sprites/enemies/Ghoul Sprite Sheet.png"
+dest_files=["res://.godot/imported/Ghoul Sprite Sheet.png-92d73528483398923180e5b0baec8ee0.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csxs083dbdyit"
-path="res://.godot/imported/Minotaur - Sprite Sheet.png-cece28a0c5576fdab10fa4658dacee35.ctex"
+uid="uid://bl161gsnr1uwr"
+path="res://.godot/imported/Twig Blight Sprite Sheet.png-8f40aec3247a11e19f8c69800dd95b84.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Minotaur - Sprite Sheet.png"
-dest_files=["res://.godot/imported/Minotaur - Sprite Sheet.png-cece28a0c5576fdab10fa4658dacee35.ctex"]
+source_file="res://assets/sprites/enemies/Twig Blight Sprite Sheet.png"
+dest_files=["res://.godot/imported/Twig Blight Sprite Sheet.png-8f40aec3247a11e19f8c69800dd95b84.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyufmsjmp4mgq"
-path="res://.godot/imported/Goblin Mech Rider Sprite Sheet.png-a7cff923d0bda52398b1c97b1f29c6b8.ctex"
+uid="uid://20tpo0ombeua"
+path="res://.godot/imported/Adventurer - Naked Sprite Sheet.png-2176e21eeae423e57409952c3f358e46.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Goblin Mech Rider Sprite Sheet.png"
-dest_files=["res://.godot/imported/Goblin Mech Rider Sprite Sheet.png-a7cff923d0bda52398b1c97b1f29c6b8.ctex"]
+source_file="res://assets/sprites/adventurer/Adventurer - Naked Sprite Sheet.png"
+dest_files=["res://.godot/imported/Adventurer - Naked Sprite Sheet.png-2176e21eeae423e57409952c3f358e46.ctex"]
 
 [params]
 

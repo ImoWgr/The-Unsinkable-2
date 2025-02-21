@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxwfsa8xc3oos"
-path="res://.godot/imported/Swampling Sprite Sheet.png-065448f5f6fc2cf845adffb73c4edda3.ctex"
+uid="uid://kqmcaj0v6waw"
+path="res://.godot/imported/Dungeon_Tileset.png-787ce4ea7c2eff62b4273981bbc945b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Swampling Sprite Sheet.png"
-dest_files=["res://.godot/imported/Swampling Sprite Sheet.png-065448f5f6fc2cf845adffb73c4edda3.ctex"]
+source_file="res://assets/sprites/environment/Dungeon_Tileset.png"
+dest_files=["res://.godot/imported/Dungeon_Tileset.png-787ce4ea7c2eff62b4273981bbc945b7.ctex"]
 
 [params]
 

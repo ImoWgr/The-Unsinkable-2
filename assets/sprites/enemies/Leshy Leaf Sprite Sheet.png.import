@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://imnxfw5cimxc"
-path="res://.godot/imported/Incubus Sprite Sheet.png-0ea18d7a0b55d69d5898e6e17a8536d4.ctex"
+uid="uid://cts38n26wok16"
+path="res://.godot/imported/Leshy Leaf Sprite Sheet.png-db9457c6551da82d06c91e6ffe6aec88.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Incubus Sprite Sheet.png"
-dest_files=["res://.godot/imported/Incubus Sprite Sheet.png-0ea18d7a0b55d69d5898e6e17a8536d4.ctex"]
+source_file="res://assets/sprites/enemies/Leshy Leaf Sprite Sheet.png"
+dest_files=["res://.godot/imported/Leshy Leaf Sprite Sheet.png-db9457c6551da82d06c91e6ffe6aec88.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://20tpo0ombeua"
-path="res://.godot/imported/Adventurer - Naked Sprite Sheet.png-44888d7da24a3f42f2237feeeecc59aa.ctex"
+uid="uid://sekpu81cxml5"
+path="res://.godot/imported/Purple Portal Sprite Sheet.png-6f25b69ecee586a44f1efd7c7f5703ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Adventurer - Naked Sprite Sheet.png"
-dest_files=["res://.godot/imported/Adventurer - Naked Sprite Sheet.png-44888d7da24a3f42f2237feeeecc59aa.ctex"]
+source_file="res://assets/sprites/portals/Purple Portal Sprite Sheet.png"
+dest_files=["res://.godot/imported/Purple Portal Sprite Sheet.png-6f25b69ecee586a44f1efd7c7f5703ce.ctex"]
 
 [params]
 

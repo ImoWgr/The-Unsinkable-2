@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cts38n26wok16"
-path="res://.godot/imported/Leshy Leaf Sprite Sheet.png-044a3d135f8860db3a72d1bd2ee7a23e.ctex"
+uid="uid://cyufmsjmp4mgq"
+path="res://.godot/imported/Goblin Mech Rider Sprite Sheet.png-93d0239ff846dc9f356880d7cff27cc9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Leshy Leaf Sprite Sheet.png"
-dest_files=["res://.godot/imported/Leshy Leaf Sprite Sheet.png-044a3d135f8860db3a72d1bd2ee7a23e.ctex"]
+source_file="res://assets/sprites/enemies/Goblin Mech Rider Sprite Sheet.png"
+dest_files=["res://.godot/imported/Goblin Mech Rider Sprite Sheet.png-93d0239ff846dc9f356880d7cff27cc9.ctex"]
 
 [params]
 

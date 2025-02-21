@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjt8jhl8jlkhh"
-path="res://.godot/imported/Eye Monster Sprite Sheet.png-7ab3b96106a2a9a83ab9fed37ade1774.ctex"
+uid="uid://di5i80g8ie70n"
+path="res://.godot/imported/Mimic Sprite Sheet.png-e3045c8a1f23d462c5fcaa13142dec55.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Eye Monster Sprite Sheet.png"
-dest_files=["res://.godot/imported/Eye Monster Sprite Sheet.png-7ab3b96106a2a9a83ab9fed37ade1774.ctex"]
+source_file="res://assets/sprites/enemies/Mimic Sprite Sheet.png"
+dest_files=["res://.godot/imported/Mimic Sprite Sheet.png-e3045c8a1f23d462c5fcaa13142dec55.ctex"]
 
 [params]
 

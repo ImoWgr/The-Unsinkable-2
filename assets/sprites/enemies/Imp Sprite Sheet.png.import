@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://citkdm53m3ri1"
-path="res://.godot/imported/Cacodaemon Sprite Sheet.png-be773e7f30bf9e43baf54afb99413794.ctex"
+uid="uid://dingi73sjw7oc"
+path="res://.godot/imported/Imp Sprite Sheet.png-13e5a3c2915d34f45ae47f3a80e363d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Cacodaemon Sprite Sheet.png"
-dest_files=["res://.godot/imported/Cacodaemon Sprite Sheet.png-be773e7f30bf9e43baf54afb99413794.ctex"]
+source_file="res://assets/sprites/enemies/Imp Sprite Sheet.png"
+dest_files=["res://.godot/imported/Imp Sprite Sheet.png-13e5a3c2915d34f45ae47f3a80e363d7.ctex"]
 
 [params]
 

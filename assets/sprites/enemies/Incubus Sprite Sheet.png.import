@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://di5i80g8ie70n"
-path="res://.godot/imported/Mimic Sprite Sheet.png-63d6a14b7f468c5670b5f70c08415926.ctex"
+uid="uid://imnxfw5cimxc"
+path="res://.godot/imported/Incubus Sprite Sheet.png-f2665923fa6fb86d6936b295c516ac35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Mimic Sprite Sheet.png"
-dest_files=["res://.godot/imported/Mimic Sprite Sheet.png-63d6a14b7f468c5670b5f70c08415926.ctex"]
+source_file="res://assets/sprites/enemies/Incubus Sprite Sheet.png"
+dest_files=["res://.godot/imported/Incubus Sprite Sheet.png-f2665923fa6fb86d6936b295c516ac35.ctex"]
 
 [params]
 

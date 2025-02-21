@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl161gsnr1uwr"
-path="res://.godot/imported/Twig Blight Sprite Sheet.png-aa7443654a028516fbee42fe5ec11aad.ctex"
+uid="uid://bj0e2tu75a6qx"
+path="res://.godot/imported/Seed.png-3bc44c244950607203b672bd89b414f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Twig Blight Sprite Sheet.png"
-dest_files=["res://.godot/imported/Twig Blight Sprite Sheet.png-aa7443654a028516fbee42fe5ec11aad.ctex"]
+source_file="res://assets/sprites/environment/Seed.png"
+dest_files=["res://.godot/imported/Seed.png-3bc44c244950607203b672bd89b414f2.ctex"]
 
 [params]
 

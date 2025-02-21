@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csed32wc8kfgi"
-path="res://.godot/imported/Green Portal Sprite Sheet.png-4959036d9251085d2147c0db3a24620e.ctex"
+uid="uid://citkdm53m3ri1"
+path="res://.godot/imported/Cacodaemon Sprite Sheet.png-476e87b8647079156d00d7325c1b7031.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Green Portal Sprite Sheet.png"
-dest_files=["res://.godot/imported/Green Portal Sprite Sheet.png-4959036d9251085d2147c0db3a24620e.ctex"]
+source_file="res://assets/sprites/enemies/Cacodaemon Sprite Sheet.png"
+dest_files=["res://.godot/imported/Cacodaemon Sprite Sheet.png-476e87b8647079156d00d7325c1b7031.ctex"]
 
 [params]
 

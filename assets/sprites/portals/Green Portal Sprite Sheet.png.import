@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvyjm5altfd1"
-path="res://.godot/imported/Goblin King Sprite Sheet.png-d2b6b7ec46ce3371485dd2f12c601eec.ctex"
+uid="uid://csed32wc8kfgi"
+path="res://.godot/imported/Green Portal Sprite Sheet.png-e1c1908c2a64913e4ea64d9208547446.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Goblin King Sprite Sheet.png"
-dest_files=["res://.godot/imported/Goblin King Sprite Sheet.png-d2b6b7ec46ce3371485dd2f12c601eec.ctex"]
+source_file="res://assets/sprites/portals/Green Portal Sprite Sheet.png"
+dest_files=["res://.godot/imported/Green Portal Sprite Sheet.png-e1c1908c2a64913e4ea64d9208547446.ctex"]
 
 [params]
 
