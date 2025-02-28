@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cir312o16kt0j"
-path="res://.godot/imported/pirates.v1.png-e98be972d4aaf938a0fb1b3908040205.ctex"
+uid="uid://bvyjm5altfd1"
+path="res://.godot/imported/Goblin King Sprite Sheet.png-9ee2e20911fcda0a859132d581ad96a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/pirates.v1.png"
-dest_files=["res://.godot/imported/pirates.v1.png-e98be972d4aaf938a0fb1b3908040205.ctex"]
+source_file="res://assets/sprites/enemies/Goblin King Sprite Sheet.png"
+dest_files=["res://.godot/imported/Goblin King Sprite Sheet.png-9ee2e20911fcda0a859132d581ad96a5.ctex"]
 
 [params]
 
