@@ -20,12 +20,20 @@ func _on_animation_finished() -> void:
 		# forward the signal to the current state-script
 		current_state._on_animated_sprite_2d_animation_finished(self)
 
+# handeling the death_timer signal
+func on_death_timer_timeout() -> void:
+	if current_state and current_state.has_method("on_death_timer_timeout"):
+		# forward the signal to the current state-script
+		current_state.on_death_timer_timeout(self)
+
+@onready var death_timer: Timer = $Timer
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 const SPEED = 100.0 # decides the speed of the player
 const JUMP_VELOCITY = -300.0 # decides the jump-speed of the player
 
 var lives = 3 # tracks the lives of the player
+
 
 var was_on_floor = true  # tracks if the player was on the floor
 var is_jumping = false   # tracks if the player is in the jumping animation
@@ -89,6 +97,6 @@ func _physics_process(delta: float) -> void:
 		elif direction < 0:
 			animated_sprite.flip_h = true
 	
-	
+	#lives = 0
 	#print(current_state)
 	move_and_slide()
