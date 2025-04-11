@@ -25,7 +25,7 @@ func _on_animation_finished() -> void:
 const SPEED = 100.0 # decides the speed of the player
 const JUMP_VELOCITY = -300.0 # decides the jump-speed of the player
 
-var lives = 3
+var lives = 3 # tracks the lives of the player
 
 var was_on_floor = true  # tracks if the player was on the floor
 var is_jumping = false   # tracks if the player is in the jumping animation
@@ -68,10 +68,14 @@ func _physics_process(delta: float) -> void:
 					pass
 			elif current_state != states["STATE_JUMP"]:
 				change_state("STATE_JUMP")
+			else:
+				pass
 		else:
 			pass
-	else:
+	elif current_state != states["STATE_DEATH"]:
 		change_state("STATE_DEATH")
+	else:
+		pass
 	
 	# calling the physics_process of the current state (to execute it)
 	if current_state and current_state.has_method("physics_process"): 
@@ -79,10 +83,12 @@ func _physics_process(delta: float) -> void:
 
 	
 	# Flip the Sprite
-	if direction > 0:
-		animated_sprite.flip_h = false
-	elif direction < 0:
-		animated_sprite.flip_h = true
+	if lives:
+		if direction > 0:
+			animated_sprite.flip_h = false
+		elif direction < 0:
+			animated_sprite.flip_h = true
 	
-	print(current_state)
+	
+	#print(current_state)
 	move_and_slide()

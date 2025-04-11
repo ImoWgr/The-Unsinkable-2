@@ -1,8 +1,8 @@
 extends PlayerBaseState
 # the death state of the player
 
-func enter(_owner):
-	pass
+func enter(owner):
+	owner.animated_sprite.play("death")
 
 func exit(_owner):
 	pass
