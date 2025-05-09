@@ -68,7 +68,7 @@ func _physics_process(delta: float) -> void:
 	# Get the input direction: -1, 0, 1
 	direction = Input.get_axis("move_left", "move_right")
 	
-	# universal state changes; manages movement & death
+	# universal state changes; manages movement, attacking, and death
 	if lives > 0:
 		if not is_rolling:
 			if is_on_floor():
