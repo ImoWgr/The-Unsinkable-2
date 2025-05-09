@@ -26,7 +26,7 @@ func on_death_timer_timeout() -> void:
 		# forward the signal to the current state-script
 		current_state.on_death_timer_timeout(self)
 
-@onready var death_timer: Timer = $Timer
+# @onready var death_timer: Timer = $Timer
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 const SPEED = 100.0 # decides the speed of the player
@@ -48,12 +48,17 @@ func change_state(new_state_name: String) -> void:
 		current_state.exit(self)
 	current_state = states[new_state_name]
 	current_state.enter(self)
+	print(current_state)
 
 
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
-
+	if Input.is_action_just_pressed("kill_player"):
+		lives = 0
+	
+	
+	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
@@ -91,12 +96,11 @@ func _physics_process(delta: float) -> void:
 
 	
 	# Flip the Sprite
-	if lives:
+	if lives > 0:
 		if direction > 0:
 			animated_sprite.flip_h = false
 		elif direction < 0:
 			animated_sprite.flip_h = true
 	
-	#lives = 0
 	#print(current_state)
 	move_and_slide()

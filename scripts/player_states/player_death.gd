@@ -8,8 +8,6 @@ func exit(_owner):
 	pass
 
 func physics_process(_owner, _delta):
-	#owner.get_tree().reload_current_scene()
-	#owner.change_state("STATE_IDLE")
 	pass
 
 func _on_animated_sprite_2d_animation_finished(owner: CharacterBody2D) -> void:
