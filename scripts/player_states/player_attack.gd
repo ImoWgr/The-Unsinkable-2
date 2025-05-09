@@ -8,25 +8,28 @@ var time_since_attack = 0.0 # timer to track how much time passed since the last
 # Called when the state is entered.
 func enter(owner):
 	owner.animated_sprite.play("attack_up")
-	owner.attack_stage = 1
+	owner.sword_attack_stage = 1
 
 # Called when the state is exited.
 func exit(owner):
-	owner.attack_stage = 0
+	owner.sword_attack_stage = 0
 
 # Called every physics frame while this state is active.
 func physics_process(owner, delta):
-	time_since_attack += delta # advance the timeout for the sheathing
-	
-	if time_since_attack == ATTACK_TIMEOUT:
-		owner.animated_sprite.play("sheathe_sword")
-		exit(self)
+	# advance the timeout for the sheathing
+	time_since_attack += delta
+	print(time_since_attack)
+	# if enough time has passed since last attack, exit state & mark that the sword is unsheathed
+	if time_since_attack > ATTACK_TIMEOUT:
+		owner.sword_sheathed = false
+		owner.change_state("STATE_IDLE")
+	# hande the different attack animations once the player attacks again
 	elif Input.is_action_just_pressed("attack"):
-		if owner.attack_stage == 1:
+		if owner.sword_attack_stage == 1:
 			owner.animated_sprite.play("attack_down")
-			owner.attack_stage = 2
-		elif owner.attack_stage == 2:
+			owner.sword_attack_stage = 2
+		elif owner.sword_attack_stage == 2:
 			owner.animated_sprite.play("attack_stab")
-			owner.attack_stage = 1
+			owner.sword_attack_stage = 1
 		else:
 			owner.animated_sprite.play("attack_up")

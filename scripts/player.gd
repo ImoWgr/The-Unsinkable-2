@@ -40,7 +40,8 @@ var was_on_floor = true  # tracks if the player was on the floor
 var is_jumping = false   # tracks if the player is in the jumping animation
 var direction = 0 # tracks the input direction
 var is_rolling = false # tracks if the player is rolling
-var attack_stage = 0 # tracks on which attack stage the player is for the 3 different attacks
+var sword_attack_stage = 0 # tracks on which attack stage the player is for the 3 different attacks
+var sword_sheathed = true
 
 # states stuff
 var current_state = null
@@ -79,6 +80,8 @@ func _physics_process(delta: float) -> void:
 					change_state("STATE_IDLE")
 				elif Input.is_action_just_pressed("roll") and direction != 0:
 					change_state("STATE_ROLL")
+				elif Input.is_action_just_pressed("attack") and current_state != states["STATE_ATTACK"]:
+					change_state("STATE_ATTACK")
 				else:
 					pass
 			elif current_state != states["STATE_JUMP"]:

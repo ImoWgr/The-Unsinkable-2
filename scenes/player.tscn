@@ -313,7 +313,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack_down",
-"speed": 7.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -339,7 +339,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack_stab",
-"speed": 7.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -365,7 +365,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack_up",
-"speed": 7.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -574,7 +574,7 @@ script = ExtResource("1_aytee")
 position = Vector2(2.5, -2.5)
 scale = Vector2(1.15625, 1.15625)
 sprite_frames = SubResource("SpriteFrames_bfy32")
-animation = &"attack_stab"
+animation = &"attack_down"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
