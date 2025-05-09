@@ -10,6 +10,7 @@ func _ready():
 	states["STATE_JUMP"] = preload("res://scripts/player_states/player_jump.gd").new()
 	states["STATE_ROLL"] = preload("res://scripts/player_states/player_roll.gd").new()
 	states["STATE_DEATH"] = preload("res://scripts/player_states/player_death.gd").new()
+	states["STATE_ATTACK"] = preload("res://scripts/player_states/player_attack.gd").new()
 	
 	# initial state
 	change_state("STATE_IDLE")
@@ -39,6 +40,7 @@ var was_on_floor = true  # tracks if the player was on the floor
 var is_jumping = false   # tracks if the player is in the jumping animation
 var direction = 0 # tracks the input direction
 var is_rolling = false # tracks if the player is rolling
+var attack_stage = 0 # tracks on which attack stage the player is for the 3 different attacks
 
 # states stuff
 var current_state = null
@@ -73,7 +75,7 @@ func _physics_process(delta: float) -> void:
 					change_state("STATE_RUN")
 				elif Input.is_action_just_pressed("jump") and current_state != states["STATE_JUMP"]:
 					change_state("STATE_JUMP")
-				elif direction == 0 and current_state != states["STATE_IDLE"]:
+				elif direction == 0 and current_state != states["STATE_IDLE"] and current_state != states["STATE_ATTACK"]:
 					change_state("STATE_IDLE")
 				elif Input.is_action_just_pressed("roll") and direction != 0:
 					change_state("STATE_ROLL")
