@@ -3,6 +3,8 @@ extends PlayerBaseState
 
 func enter(owner):
 	owner.animated_sprite.play("death")
+	owner.velocity.x = 0
+	owner.velocity.y = 0
 
 func exit(_owner):
 	pass

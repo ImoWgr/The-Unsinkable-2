@@ -51,11 +51,12 @@ func change_state(new_state_name: String) -> void:
 		current_state.exit(self)
 	current_state = states[new_state_name]
 	current_state.enter(self)
-	print(current_state)
+	#print(current_state)
 
 
-func lose_life() -> void:
-	lives -= 1
+func lose_lives(subtracted_lives) -> void:
+	lives -= subtracted_lives
+	print("remaining lives: ", lives)
 
 
 func _physics_process(delta: float) -> void:
