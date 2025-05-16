@@ -1,7 +1,8 @@
-[gd_scene load_steps=77 format=3 uid="uid://c3s00wm3rmcf3"]
+[gd_scene load_steps=78 format=3 uid="uid://c3s00wm3rmcf3"]
 
 [ext_resource type="Script" uid="uid://dsludbdmlsxds" path="res://scripts/player.gd" id="1_aytee"]
 [ext_resource type="Texture2D" uid="uid://l5umo27dflmv" path="res://assets/sprites/adventurer/Adventurer Sprite Sheet v1.5.png" id="2_qvhgs"]
+[ext_resource type="PackedScene" uid="uid://caesfmc8ebl1e" path="res://scenes/player_attack_zone.tscn" id="3_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
 atlas = ExtResource("2_qvhgs")
@@ -589,13 +590,12 @@ visible = false
 position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_6yeld")
 
-[node name="AttackZone" type="Area2D" parent="."]
-collision_layer = 8
-collision_mask = 8
+[node name="PlayerAttackZone" parent="." instance=ExtResource("3_qhqgy")]
+position = Vector2(-58, -4)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackZone"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerAttackZone"]
 visible = false
-position = Vector2(18, 4)
+position = Vector2(76, 8)
 rotation = 1.5754
 shape = SubResource("CapsuleShape2D_g2els")
 
