@@ -54,6 +54,9 @@ func change_state(new_state_name: String) -> void:
 	print(current_state)
 
 
+func lose_life() -> void:
+	lives -= 1
+
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

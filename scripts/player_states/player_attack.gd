@@ -18,11 +18,12 @@ func exit(owner):
 func physics_process(owner, delta):
 	# advance the timeout for the sheathing
 	time_since_attack += delta
-	print(time_since_attack)
+	#print(time_since_attack)
 	# if enough time has passed since last attack, exit state & mark that the sword is unsheathed
 	if time_since_attack > ATTACK_TIMEOUT:
 		owner.sword_sheathed = false
 		owner.change_state("STATE_IDLE")
+		time_since_attack = 0.0
 	# hande the different attack animations once the player attacks again
 	elif Input.is_action_just_pressed("attack"):
 		if owner.sword_attack_stage == 1: # second attack type
