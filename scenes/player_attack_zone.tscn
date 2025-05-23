@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://caesfmc8ebl1e"]
+
+[ext_resource type="Script" uid="uid://dpq3ld1pcyak8" path="res://player_attack_zone.gd" id="1_3grdu"]
+
+[node name="PlayerAttackZone" type="Area2D"]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_3grdu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
