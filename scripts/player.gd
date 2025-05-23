@@ -14,6 +14,11 @@ func _ready():
 	
 	# initial state
 	change_state("STATE_IDLE")
+	
+	var AttackZone = $PlayerAttackZone # calls on the Player Attack Zone
+	AttackZone.set_process(false) # disables the Attack Zone (the default state)
+
+
 
 # handeling the _animation_finished signal
 func _on_animation_finished() -> void:
@@ -51,8 +56,12 @@ func change_state(new_state_name: String) -> void:
 		current_state.exit(self)
 	current_state = states[new_state_name]
 	current_state.enter(self)
-	print(current_state)
+	#print(current_state)
 
+
+func lose_lives(subtracted_lives) -> void:
+	lives -= subtracted_lives
+	print("remaining lives: ", lives)
 
 
 func _physics_process(delta: float) -> void:
