@@ -15,9 +15,9 @@ func _ready():
 	# initial state
 	change_state("STATE_IDLE")
 	
-	var AttackZone = $PlayerAttackZone # calls on the Player Attack Zone
-	AttackZone.set_process(false) # disables the Attack Zone (the default state)
-
+	#var AttackZone = $PlayerAttackZone # calls on the Player Attack Zone
+	#AttackZone.set_process(false) # disables the Attack Zone (the default state)
+@onready var AttackZone = $PlayerAttackZone
 
 
 # handeling the _animation_finished signal
@@ -113,8 +113,12 @@ func _physics_process(delta: float) -> void:
 	if lives > 0:
 		if direction > 0:
 			animated_sprite.flip_h = false
+			AttackZone.rotation_degrees = 0
+			AttackZone.y.scale = 0
 		elif direction < 0:
 			animated_sprite.flip_h = true
+			AttackZone.rotation_degrees = 180
+			AttackZone.y.scale = -1
 	
 	#print(current_state)
 	move_and_slide()

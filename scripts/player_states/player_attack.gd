@@ -40,3 +40,9 @@ func physics_process(owner, delta):
 			owner.animated_sprite.play("attack_up") # first attack type
 			time_since_attack = 0.0
 	
+	if time_since_attack > ATTACK_FINISHED:
+		owner.AttackZone.set_process(true)
+	else:
+		owner.AttackZone.set_process(false)
+	
+	
