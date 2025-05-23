@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://l8avkt81kgya"]
 
-[ext_resource type="Script" uid="uid://d1oic2t50bnec" path="res://character_body_2d.gd" id="1_5u4nw"]
+[ext_resource type="Script" uid="uid://d1oic2t50bnec" path="res://scripts/Goblin/Goblin.gd" id="1_5u4nw"]
 [ext_resource type="Texture2D" uid="uid://dpalmu7iypb8h" path="res://assets/sprites/enemies/Ghoul Sprite Sheet.png" id="2_j2i8v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lik2q"]
@@ -120,7 +120,9 @@ size = Vector2(13, 22)
 [sub_resource type="CircleShape2D" id="CircleShape2D_ly2qs"]
 radius = 129.0
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Goblin" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 3
 script = ExtResource("1_5u4nw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -136,4 +138,5 @@ shape = SubResource("RectangleShape2D_n8o1s")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_ly2qs")
