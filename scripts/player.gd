@@ -14,6 +14,11 @@ func _ready():
 	
 	# initial state
 	change_state("STATE_IDLE")
+	
+	var AttackZone = $PlayerAttackZone # calls on the Player Attack Zone
+	AttackZone.set_process(false) # disables the Attack Zone (the default state)
+
+
 
 # handeling the _animation_finished signal
 func _on_animation_finished() -> void:

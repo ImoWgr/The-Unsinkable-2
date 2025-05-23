@@ -1,7 +1,8 @@
 extends PlayerBaseState
 # the attack state of the player
 
-const ATTACK_TIMEOUT = 3.0 # how long until the player sheathes their weapon
+const ATTACK_TIMEOUT = 2.0 # how long until the player sheathes their weapon
+const ATTACK_FINISHED = 0.75
 var time_since_attack = 0.0 # timer to track how much time passed since the last attack 
 
 
@@ -9,6 +10,7 @@ var time_since_attack = 0.0 # timer to track how much time passed since the last
 func enter(owner):
 	owner.animated_sprite.play("attack_up")
 	owner.sword_attack_stage = 1
+	
 
 # resets the attack stage
 func exit(owner):
@@ -29,8 +31,12 @@ func physics_process(owner, delta):
 		if owner.sword_attack_stage == 1: # second attack type
 			owner.animated_sprite.play("attack_down")
 			owner.sword_attack_stage = 2
+			time_since_attack = 0.0
 		elif owner.sword_attack_stage == 2: # third attack type
 			owner.animated_sprite.play("attack_stab")
 			owner.sword_attack_stage = 1
+			time_since_attack = 0.0
 		else:
 			owner.animated_sprite.play("attack_up") # first attack type
+			time_since_attack = 0.0
+	
