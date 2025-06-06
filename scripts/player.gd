@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var attack_zone = $PlayerAttackZone # the attack zone of the player
+
 func _ready():
 	# connecting the animation_finished signal to a method in this script; to allow its usage in the state-scripts
 	animated_sprite.connect("animation_finished", Callable(self, "_on_animation_finished"))
@@ -15,9 +17,8 @@ func _ready():
 	# initial state
 	change_state("STATE_IDLE")
 	
-	#var AttackZone = $PlayerAttackZone # calls on the Player Attack Zone
-	#AttackZone.set_process(false) # disables the Attack Zone (the default state)
-@onready var AttackZone = $PlayerAttackZone
+	attack_zone.set_process(false) # disables the attack zone (to be enabled only during attack-state)
+
 
 
 # handeling the _animation_finished signal
@@ -113,12 +114,12 @@ func _physics_process(delta: float) -> void:
 	if lives > 0:
 		if direction > 0:
 			animated_sprite.flip_h = false
-			AttackZone.rotation_degrees = 0
-			AttackZone.y.scale = 0
+			#AttackZone.rotation_degrees = 0
+			#AttackZone.y.scale = 0
 		elif direction < 0:
 			animated_sprite.flip_h = true
-			AttackZone.rotation_degrees = 180
-			AttackZone.y.scale = -1
+			#AttackZone.rotation_degrees = 180
+			#AttackZone.y.scale = -1
 	
 	#print(current_state)
 	move_and_slide()

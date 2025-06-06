@@ -41,8 +41,8 @@ func physics_process(owner, delta):
 			time_since_attack = 0.0
 	
 	if time_since_attack > ATTACK_FINISHED:
-		owner.AttackZone.set_process(true)
+		owner.attack_zone.set_process(true)
 	else:
-		owner.AttackZone.set_process(false)
+		owner.attack_zone.set_process(false)
 	
 	
