@@ -1,7 +1,0 @@
-[gd_scene load_steps=0 format=3 uid="uid://t6286471kfme"]
-
-[node name="Player2" type="Node2D"]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]

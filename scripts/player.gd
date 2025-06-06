@@ -38,6 +38,8 @@ func on_death_timer_timeout() -> void:
 
 const SPEED = 100.0 # decides the speed of the player
 const JUMP_VELOCITY = -300.0 # decides the jump-speed of the player
+const ATTACK_ZONE_DISTANCE_TO_PLAYER = 8
+const ANIMATED_SPRITE_OFFSET_H_FLIPPED = 4
 
 var lives = 3 # tracks the lives of the player
 
@@ -108,18 +110,18 @@ func _physics_process(delta: float) -> void:
 	# calling the physics_process of the current state (to execute it)
 	if current_state and current_state.has_method("physics_process"): 
 		current_state.physics_process(self, delta)
-
+	
 	
 	# Flip the Sprite
 	if lives > 0:
 		if direction > 0:
 			animated_sprite.flip_h = false
-			#AttackZone.rotation_degrees = 0
-			#AttackZone.y.scale = 0
+			attack_zone.global_position.x = global_position.x + ATTACK_ZONE_DISTANCE_TO_PLAYER
+			animated_sprite.offset.x = 0
 		elif direction < 0:
 			animated_sprite.flip_h = true
-			#AttackZone.rotation_degrees = 180
-			#AttackZone.y.scale = -1
+			attack_zone.global_position.x = global_position.x - ATTACK_ZONE_DISTANCE_TO_PLAYER
+			animated_sprite.offset.x = -ANIMATED_SPRITE_OFFSET_H_FLIPPED
 	
 	#print(current_state)
 	move_and_slide()
