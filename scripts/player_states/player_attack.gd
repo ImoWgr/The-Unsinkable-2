@@ -10,11 +10,13 @@ var time_since_attack = 0.0 # timer to track how much time passed since the last
 func enter(owner):
 	owner.animated_sprite.play("attack_up")
 	owner.sword_attack_stage = 1
+	time_since_attack = 0.0
 	
 
 # resets the attack stage
 func exit(owner):
 	owner.sword_attack_stage = 0
+	owner.attack_zone.set_process(false) # Attackzone deaktivieren
 
 
 func physics_process(owner, delta):
@@ -39,4 +41,10 @@ func physics_process(owner, delta):
 		else:
 			owner.animated_sprite.play("attack_up") # first attack type
 			time_since_attack = 0.0
+	
+	if time_since_attack > ATTACK_FINISHED:
+		owner.attack_zone.set_process(true)
+	else:
+		owner.attack_zone.set_process(false)
+	
 	

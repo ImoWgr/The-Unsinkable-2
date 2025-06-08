@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var attack_zone = $PlayerAttackZone # the attack zone of the player
+
 func _ready():
 	# connecting the animation_finished signal to a method in this script; to allow its usage in the state-scripts
 	animated_sprite.connect("animation_finished", Callable(self, "_on_animation_finished"))
@@ -15,8 +17,7 @@ func _ready():
 	# initial state
 	change_state("STATE_IDLE")
 	
-	var AttackZone = $PlayerAttackZone # calls on the Player Attack Zone
-	AttackZone.set_process(false) # disables the Attack Zone (the default state)
+	attack_zone.set_process(false) # disables the attack zone (to be enabled only during attack-state)
 
 
 
@@ -37,6 +38,8 @@ func on_death_timer_timeout() -> void:
 
 const SPEED = 100.0 # decides the speed of the player
 const JUMP_VELOCITY = -300.0 # decides the jump-speed of the player
+const ATTACK_ZONE_DISTANCE_TO_PLAYER = 8
+const ANIMATED_SPRITE_OFFSET_H_FLIPPED = 4
 
 var lives = 3 # tracks the lives of the player
 
@@ -107,14 +110,18 @@ func _physics_process(delta: float) -> void:
 	# calling the physics_process of the current state (to execute it)
 	if current_state and current_state.has_method("physics_process"): 
 		current_state.physics_process(self, delta)
-
+	
 	
 	# Flip the Sprite
 	if lives > 0:
 		if direction > 0:
 			animated_sprite.flip_h = false
+			attack_zone.global_position.x = global_position.x + ATTACK_ZONE_DISTANCE_TO_PLAYER
+			animated_sprite.offset.x = 0
 		elif direction < 0:
 			animated_sprite.flip_h = true
+			attack_zone.global_position.x = global_position.x - ATTACK_ZONE_DISTANCE_TO_PLAYER
+			animated_sprite.offset.x = -ANIMATED_SPRITE_OFFSET_H_FLIPPED
 	
 	#print(current_state)
 	move_and_slide()
