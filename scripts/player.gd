@@ -49,7 +49,7 @@ var is_jumping = false   # tracks if the player is in the jumping animation
 var direction = 0 # tracks the input direction
 var is_rolling = false # tracks if the player is rolling
 var sword_attack_stage = 0 # tracks on which attack stage the player is for the 3 different attacks
-var sword_sheathed = true
+var sword_sheathed = true # tracks if the sword has been sheathed; for the sheathing animation
 
 # states stuff
 var current_state = null
@@ -122,6 +122,12 @@ func _physics_process(delta: float) -> void:
 			animated_sprite.flip_h = true
 			attack_zone.global_position.x = global_position.x - ATTACK_ZONE_DISTANCE_TO_PLAYER
 			animated_sprite.offset.x = -ANIMATED_SPRITE_OFFSET_H_FLIPPED
+	
+	
+	#if attack_zone.is_processing():
+		#print("attack_zone is enabled")
+	#else:
+		#aprint("attack_zone is disabled")
 	
 	#print(current_state)
 	move_and_slide()

@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=4 uid="uid://byg6rguo75i87"]
 
-[ext_resource type="PackedScene" uid="uid://c3s00wm3rmcf3" path="res://scenes/player.tscn" id="1_7jktm"]
+[ext_resource type="PackedScene" uid="uid://c3s00wm3rmcf3" path="res://scenes/Player.tscn" id="1_7jktm"]
 [ext_resource type="Texture2D" uid="uid://bt8iua1uqxp0i" path="res://assets/tilesets/CastleTiles.png" id="2_ryrav"]
 [ext_resource type="Texture2D" uid="uid://d3o8eyrotxfxb" path="res://assets/tilesets/ExtraTiles1.png" id="3_eow3j"]
 [ext_resource type="Texture2D" uid="uid://d2hv0hofqarry" path="res://assets/tilesets/InfernoTiles.png" id="4_j5wjh"]

@@ -579,7 +579,7 @@ height = 22.0
 radius = 12.0045
 height = 24.009
 
-[node name="player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 script = ExtResource("1_aytee")
 

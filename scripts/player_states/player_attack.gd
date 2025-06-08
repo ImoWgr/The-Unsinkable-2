@@ -2,7 +2,7 @@ extends PlayerBaseState
 # the attack state of the player
 
 const ATTACK_TIMEOUT = 2.0 # how long until the player sheathes their weapon
-const ATTACK_FINISHED = 0.75
+const ATTACK_FINISHED = 0.3 # how long an attack counts as attacking
 var time_since_attack = 0.0 # timer to track how much time passed since the last attack 
 
 
