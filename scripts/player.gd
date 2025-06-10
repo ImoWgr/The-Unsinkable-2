@@ -16,8 +16,6 @@ func _ready():
 	
 	# initial state
 	change_state("STATE_IDLE")
-	
-	attack_zone.set_process(false) # disables the attack zone (to be enabled only during attack-state)
 
 
 
@@ -50,6 +48,9 @@ var direction = 0 # tracks the input direction
 var is_rolling = false # tracks if the player is rolling
 var sword_attack_stage = 0 # tracks on which attack stage the player is for the 3 different attacks
 var sword_sheathed = true # tracks if the sword has been sheathed; for the sheathing animation
+
+signal attack
+
 
 # states stuff
 var current_state = null
@@ -124,10 +125,11 @@ func _physics_process(delta: float) -> void:
 			animated_sprite.offset.x = -ANIMATED_SPRITE_OFFSET_H_FLIPPED
 	
 	
-	#if attack_zone.is_processing():
-		#print("attack_zone is enabled")
-	#else:
-		#aprint("attack_zone is disabled")
 	
 	#print(current_state)
 	move_and_slide()
+
+
+
+func _on_attack() -> void:
+	print("player has attacked")

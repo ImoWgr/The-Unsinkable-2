@@ -34,17 +34,16 @@ func physics_process(owner, delta):
 			owner.animated_sprite.play("attack_down")
 			owner.sword_attack_stage = 2
 			time_since_attack = 0.0
+			owner.emit_signal("attack")
 		elif owner.sword_attack_stage == 2: # third attack type
 			owner.animated_sprite.play("attack_stab")
 			owner.sword_attack_stage = 1
 			time_since_attack = 0.0
+			owner.emit_signal("attack")
 		else:
 			owner.animated_sprite.play("attack_up") # first attack type
 			time_since_attack = 0.0
+			owner.emit_signal("attack")
 	
-	if time_since_attack > ATTACK_FINISHED:
-		owner.attack_zone.set_process(true)
-	else:
-		owner.attack_zone.set_process(false)
 	
 	
