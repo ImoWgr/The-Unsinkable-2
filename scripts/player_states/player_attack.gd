@@ -16,7 +16,6 @@ func enter(owner):
 # resets the attack stage
 func exit(owner):
 	owner.sword_attack_stage = 0
-	owner.attack_zone.set_process(false) # Attackzone deaktivieren
 
 
 func physics_process(owner, delta):
@@ -30,20 +29,16 @@ func physics_process(owner, delta):
 		time_since_attack = 0.0
 	# hande the different attack animations once the player attacks again
 	elif Input.is_action_just_pressed("attack"):
+		owner.emit_signal("attack")
+		time_since_attack = 0.0
 		if owner.sword_attack_stage == 1: # second attack type
 			owner.animated_sprite.play("attack_down")
 			owner.sword_attack_stage = 2
-			time_since_attack = 0.0
-			owner.emit_signal("attack")
 		elif owner.sword_attack_stage == 2: # third attack type
 			owner.animated_sprite.play("attack_stab")
 			owner.sword_attack_stage = 1
-			time_since_attack = 0.0
-			owner.emit_signal("attack")
 		else:
 			owner.animated_sprite.play("attack_up") # first attack type
-			time_since_attack = 0.0
-			owner.emit_signal("attack")
 	
 	
 	
